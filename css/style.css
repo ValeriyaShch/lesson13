@@ -1,0 +1,375 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.woff2) format("woff2");
+  font-weight: 400px;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  cursor: pointer;
+}
+/* _____________ */
+.wrapper {
+  background: url(../img/background.jpg) no-repeat 50% / cover;
+
+  width: 1240px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow-x: scroll;
+}
+.background {
+  background: rgba(22, 21, 21, 0.5);
+  width: 1240px;
+  height: 100vh;
+}
+.main-container {
+  width: 496px;
+  height: 100vh;
+  background: rgba(233, 233, 233, 0.25);
+  backdrop-filter: blur(5px);
+  margin-left: auto;
+}
+.container {
+  width: 340px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.enter-switch {
+  margin-bottom: 75px;
+}
+.enter-switch input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.enter-switch input + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 340px;
+  height: 36px;
+  border-radius: 30px;
+  border: 1px solid #153416;
+  cursor: pointer;
+  position: relative;
+}
+.enter-switch input + label::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 168px;
+  height: 32px;
+  border-radius: 30px;
+  background: #153416;
+  transition: all 0.5s linear;
+}
+.enter-switch input:checked + label::before {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+.enter {
+  color: #fff;
+
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  flex: 1 1 50%;
+}
+.form-title {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 29px;
+}
+.email,
+.password {
+  width: 340px;
+  height: 44px;
+  border-radius: 30px;
+  background: #929191;
+  border: none;
+}
+
+input::placeholder {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+.email {
+  margin-bottom: 15px;
+}
+.form {
+  margin-bottom: 21px;
+}
+.checkbox {
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+}
+.custom-checkbox {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.custom-checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox label {
+  padding: 5px 5px 5px 25px;
+  display: inline-block;
+  cursor: pointer;
+}
+.custom-checkbox label::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+}
+.custom-checkbox input:checked + label::before {
+  background: #153416 url(../img/Vector.svg) no-repeat 2px;
+  border: none;
+}
+.password-link {
+  color: #153416;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+}
+.button {
+  border-radius: 30px;
+  background: #153416;
+  border: none;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 15px 0;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.button:hover {
+  text-decoration: underline;
+}
+.button:active {
+  background: #061907;
+}
+.registration {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.ack {
+  color: #153416;
+
+  font-family: Roboto;
+  font-size: 12px;
+
+  font-weight: 400;
+}
+.registration-link {
+  color: #fff;
+
+  font-family: Roboto;
+  font-size: 12px;
+
+  font-weight: 400;
+}
+.social-text {
+  color: #153416;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.social-link a {
+  display: block;
+}
+.social-item svg {
+  display: block;
+}
+.facebook {
+  width: 14px;
+  height: 24px;
+  cursor: pointer;
+}
+.instagram {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.linkedin {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.svg {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
